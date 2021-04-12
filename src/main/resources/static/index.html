@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Oblig 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-2">
+        </div>
+
+        <div class="col-8">
+            <h2 style="margin-top: 10px; margin-bottom: 30px"> Bestilling av kinobiletter</h2>
+            <form>
+                <div class="form-group">
+                    <label> Velg film </label> <br/>
+                    <select class="form-select" id="film">
+                        <option value="Velg film her:" disabled selected> Velg film her:</option>
+                        <option value="The Fast And The Furious"> The Fast And The Furious</option>
+                        <option value="Shrek"> Shrek</option>
+                        <option value="Ocean 11"> Ocean 11</option>
+                    </select>
+                    <div id="errorVelgFilm"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="antallPersoner">Antall</label><input class="form-control" type="number" id="antallPersoner" style="width: 80px">
+                    <div id="errorAntall"></div>
+                </div>
+
+                <div class="form-group">
+                    <label> Fornavn </label>
+                    <input class="form-control" type="text" id="fornavn">
+                    <div id="errorFornavn"></div>
+                </div>
+
+                <div class="form-group">
+                    <label> Etternavn</label>
+                    <input class="form-control" type="text" id="etternavn">
+                    <div id="errorEtternavn"></div>
+                </div>
+
+                <div class="form-group">
+                    <label> Telefonnr</label>
+                    <input class="form-control" type="text" id="telefonnr">
+                    <div id="errorTelefonnr"></div>
+                </div>
+
+                <div class="form-group">
+                    <label> Epost</label>
+                    <input class="form-control" type="text" id="epost">
+                    <div id="errorEpost"></div>
+                </div>
+
+                <div style="margin-top: 10px">
+                    <button type="button" class="btn btn-primary" id="kjop" onclick="kjopBiletter()"> Kjøp bilett</button>
+                </div>
+
+            </form>
+
+            <div style="margin-top: 20px">
+                <h4> Alle biletter</h4>
+                <div id="alleBiletter"></div>
+                <button class="btn btn-danger" id="slett" onclick="slettAlleBiletter()"> Slett alle bilettene</button>
+            </div>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+</div>
+</body>
+</html>
